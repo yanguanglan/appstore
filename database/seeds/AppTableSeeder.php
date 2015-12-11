@@ -41,7 +41,7 @@ class AppTableSeeder extends Seeder
         }*/
 
         //1
-        $file = file_get_contents('http://appstore.dev/android.json');
+        $file = file_get_contents('http://101.69.251.189:2183/android.json');
         $c = json_decode($file, true);
         foreach ($c as $v) {
             //$type = str_replace('.', '', $v['type']);
@@ -61,7 +61,7 @@ class AppTableSeeder extends Seeder
             ]);
         }
         //2
-        $file = file_get_contents('http://appstore.dev/ios.json');
+        $file = file_get_contents('http://101.69.251.189:2183/android.json');
         $c = json_decode($file, true);
          foreach ($c as $v) {
             //$type = str_replace('.', '', $v['type']);
@@ -85,7 +85,7 @@ class AppTableSeeder extends Seeder
 
         //3
 
-        $file = file_get_contents('http://appstore.dev/oculus.json');
+        $file = file_get_contents('http://101.69.251.189:2183/android.json');
         $c = json_decode($file, true);
         foreach ($c as $v) {
             //$type = str_replace('.', '', $v['type']);
