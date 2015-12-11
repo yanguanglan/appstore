@@ -61,7 +61,7 @@ class AppTableSeeder extends Seeder
             ]);
         }
         //2
-        $file = file_get_contents('http://101.69.251.189:2183/android.json');
+        $file = file_get_contents('http://101.69.251.189:2183/ios.json');
         $c = json_decode($file, true);
          foreach ($c as $v) {
             //$type = str_replace('.', '', $v['type']);
@@ -85,7 +85,7 @@ class AppTableSeeder extends Seeder
 
         //3
 
-        $file = file_get_contents('http://101.69.251.189:2183/android.json');
+        $file = file_get_contents('http://101.69.251.189:2183/oculus.json');
         $c = json_decode($file, true);
         foreach ($c as $v) {
             //$type = str_replace('.', '', $v['type']);
