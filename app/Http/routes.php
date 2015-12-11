@@ -50,6 +50,13 @@ Route::get('/search/{q}', ['as' => 'search', function ($q) {
 //下载
 Route::get('/download/{id}', ['as' => 'download', function ($id) {
 	$app = App\App::findOrFail($id);
-    return view('welcome');
+	$app->increment('downloads', 1);//下载加1
+	$pathToFile = base_path() . '/public/' . $app->source;
+
+	if(!strpos($app->source, 'http')){
+		return response()->download($pathToFile);
+	}else{
+		return redirect($app->source);
+	}
 }]);
 

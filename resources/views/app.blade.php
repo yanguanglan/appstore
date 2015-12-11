@@ -69,7 +69,7 @@
 	      				<span class="p_1"><a href="{{route('detail', ['id'=>$app->id])}}">@if($app->name_chn==''){{str_limit($app->name_eng, 10)}}@else{{str_limit($app->name_chn, 10)}}@endif</a></span>
 	      				<span class="p_2">14.0M</span>
 	      			</p>
-	      			<span class="span_1"><a target="_blank" href="{{route('download', ['id'=>$app->id])}}">免费下载</a></span>
+	      			<a class="span_1" href="{{route('download', ['id'=>$app->id])}}">免费下载</a>
 	      		</div>
 	      		@endforeach
 	      		<div class="btn btn2">

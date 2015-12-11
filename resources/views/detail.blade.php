@@ -27,7 +27,7 @@
 			 	    <div class="c_right">
 			 	    	<h1>@if($app->name_chn==''){{$app->name_eng}}@else{{$app->name_chn}} {{$app->name_eng}}@endif</h1>
 			 	    	<p class="c_p1">{{$app->downloads}}次下载</p>
-			 	    	<p class="c_p2">介绍游戏的主要功啊手机防盗</p>
+			 	    	<p class="c_p2">简介</p>
 			 	    	<p class="c_p3"><a target="_blank" href="{{route('download', ['id'=>$app->id])}}">免费下载</a></p>
 			 	    </div>
 			    </div>
