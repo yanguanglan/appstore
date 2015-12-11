@@ -52,8 +52,7 @@ Route::get('/download/{id}', ['as' => 'download', function ($id) {
 	$app = App\App::findOrFail($id);
 	$app->increment('downloads', 1);//下载加1
 	$pathToFile = base_path() . '/public/' . $app->source;
-
-	if(!strpos($app->source, 'http')){
+	if(strpos($app->source, 'https')===false){
 		return response()->download($pathToFile);
 	}else{
 		return redirect($app->source);
