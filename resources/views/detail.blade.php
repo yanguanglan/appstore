@@ -23,7 +23,7 @@
 		<div class="content">
 			<div class="c_info">
 			    <div class="c_top">
-			 	    <div class="c_left"><img src="{{asset('img/banner.jpg')}}" width="215px" height="215px"></div>
+			 	    <div class="c_left"><img src="{{asset($app->thumb)}}" width="215px" height="215px"></div>
 			 	    <div class="c_right">
 			 	    	<h1>@if($app->name_chn==''){{$app->name_eng}}@else{{$app->name_chn}} {{$app->name_eng}}@endif</h1>
 			 	    	<p class="c_p1">{{$app->downloads}}次下载</p>

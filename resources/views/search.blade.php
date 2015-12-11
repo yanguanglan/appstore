@@ -51,7 +51,7 @@
 				@foreach($apps as $app)
 	      		<div class="atr_1">
 	      			<a href="{{route('detail', ['id'=>$app->id])}}">
-	      			<img src="{{asset('img/banner.jpg')}}"></a>
+	      			<img src="{{asset($app->thumb)}}"></a>
 	      			<p>
 	      				<span class="p_1"><a href="{{route('detail', ['id'=>$app->id])}}">@if($app->name_chn==''){{str_limit($app->name_eng, 10)}}@else{{str_limit($app->name_chn, 10)}}@endif</a></span>
 	      				<span class="p_2">14.0M</span>
