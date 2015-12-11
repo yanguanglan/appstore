@@ -1,0 +1,128 @@
+@charset "utf-8";
+*{
+	margin:0 auto;
+}
+html{
+	font-size:20px;
+	font-family:"arial, helvetica, sans-serif";
+}
+body{
+	background:#f2f2f2;
+}
+@media all and (min-width:320px){
+	html{font-size:10px;!important;}
+}
+@media all and (min-width:384px){
+	html{font-size:12px;!important;}
+}
+@media all and (min-width:480px){
+	html{font-size:15px;!important;}
+}
+@media all and (min-width:640px){
+	html{font-size:20px;!important;}
+}
+@media all and (min-width:736px){
+	html{font-size:30px;!important;}
+}
+/*导航*/
+.header{width:100%;background:#FFF;}
+.header_info{max-width:1000px;width:100%;height:102px;line-height: 102px;margin:0 auto;background:#FFF;}
+/*narber*/
+.header_phone {display: none;}
+
+
+
+/*logo*/
+.h_l{width:23%;height:102px;line-height: 102px;text-align: center;float:left;}
+.h_l img{vertical-align: middle;display: inline-block;}
+.h_l span{display: inline-block;height: 100%;vertical-align: middle;}
+.h_l a{display:block;}
+/*header right*/
+.header_info .h_r{width:399px;height:102px;float:right;}
+.h_r_search{width:395px;height:42px;border:solid 2px #4c84fd;margin-top:24px;}
+.h_r_search img{float:left;display: block;   margin:9px 9px;}
+.h_r_search input{floaT:right;border: none;border-left:#999999 solid 1px;}
+.h_r_1{width:257px;height:42px; font-size:14px;}
+.h_r_2{width:94px;height:42px;background:#4c84fd;border:none;font-size:16px;color:#FFF;}
+.h_r_2ul{width:399px;height:30px; line-height:30px;}
+.h_r_2ul li{float:left;}
+.h_r_2ul li a{color:#b6b6b6;padding-right:10px;}
+.h_r_2ul li a:hover{color:#565656;}
+/*结果*/
+.re_inner{padding-bottom:10px;}
+.resort_box{ width:100%; max-width:1000px; display: block; height:40px; line-height: 40px; margin:0 auto; font-size:14px;}
+.resort{ width:100%; max-width:1000px;/*height:777px; */margin:0 auto; background-color:#FFF;}
+.resort h1{ font-size:20px; color:#565656; font-family:"arial, helvetica, sans-serif"; font-weight:bold;  margin:0 auto;}
+.resort_h1{ padding-bottom: 20px;}
+.resort_span{ color:#4C84FD;}
+.resort_info{ width:98%; margin:0 auto; padding-top:20px;margin-bottom: 400px;}
+/*选项卡*/
+
+.atr{display:none;width:100%;max-width:1020px;}
+.show{ display: block; }
+.atr_1{width:17.7%;height:278px;background:#FFF;/*float:left;*/display: inline-block; zoom: 1s; margin:0 10px 10px;}
+.atr_1 img{width:100%;height:183px;overflow:hidden;}
+.atr_1 p{width:90%;height:46px;margin:0 auto;color:#565656;font-size:16px;}
+.atr_1 .p_1{height:46px;line-height: 46px;float:left;}
+.atr_1 .p_2{height:46px;line-height: 46px;float:right;}
+.atr_1 .span_1{width:90%;height:37px;line-height: 37px;display: block;text-align: center;border:solid 1px #4c84fd;border-radius: 5px; font-size:18px;color:#4c84fd;}
+.atr_1 .span_1:hover{background:#4c84fd;color:#FFF;}
+
+.footer{clear:both;width:100%;height:60px;line-height: 60px;background:#8a8a8a;text-align: center;position:fixed; bottom:0;}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 780px) {
+body{ max-width: 780px;}
+.header_info{display: none;}
+.header_phone{ display:block;width: 100%;  padding-bottom: 10px; /*height: 100px;*/ /*line-height: 100px;*/}
+.navbar_search1{ width:95%; height:25px; line-height: 25px; clear: both; margin:0 auto; /* border: 2px solid #ddd; */position: relative; }
+.navbar_search1 img{position: absolute; left: 1.5%; top: 4px; }
+.navbar_search1 input{border: none; background-color:#eeeff3;width: 90%; height: 100%;border-radius: 10px; padding-left:10%;}
+.navbar_logo{width:120px; position:absolute; left:50%; margin-left:-60px; display: block; height:52px; line-height: 52px;}
+.navbar_logo img{ vertical-align: middle; display: inline;}
+.navbar_search{float: right;}
+#nav { display: block;float: left;}
+.menubtn {position: relative; z-index: 101; color: #274a61;text-decoration: none;font-size: 0em;line-height: 0em;top: 2px;padding: 15px;margin: 10px 20px;background-image: url('../img/hamburger.png'); 
+background-position: 50% 50%;background-size: 25px 25px; background-repeat: no-repeat; float:left; width:20%;}
+.menubtn:hover, .openmenu .menubtn {color: #bdd43e;}
+body.openmenu {position: fixed;overflow: hidden;}
+/*#pgcontainer {margin: 0;}*/
+.overlay {position: fixed;z-index: 99;background-color: rgba(0,0,0,0.5);bottom: 0;right: 0;left: 0;}
+.openmenu .overlay {top: 0;}
+
+#hamburgermenu {height: 100%; width: 0;background:#FFF; position: fixed;top: 0;left: 0; z-index: 101; overflow: hidden;-webkit-box-shadow: 3px 0 7px rgba(0,0,0,0.55);
+-moz-box-shadow: 3px 0 7px rgba(0,0,0,0.55);box-shadow: 3px 0 7px rgba(0,0,0,0.55);
+}
+#hamburgermenu ul {z-index: 101;overflow-y: auto;overflow-x: hidden;}
+#hamburgermenu ul li {display: block;}
+#hamburgermenu ul li a {display: block;min-width: 130px;padding: 10px 8px;color:#858585;font-size: 1.45em;font-weight: bold;text-decoration: none;
+text-align: center;}
+#hamburgermenu li a:hover {color: #fff; background: #2c2c2c;}
+.cnav{ color:#FFF; background:#4C84FD;}
+/*teb*/
+
+.atr_1{width:95%; height:80px; line-height:80px;/*mar0px;gin:0 0 15px 0;*/ overflow: hidden;}
+.atr_1 a{ display: block;width:33%; float:left;/* height:auto;*/overflow:hidden;}
+.atr_1 img{/*width:93%;*/ }
+.atr_1 p{ width:33%;float:left; height:80px; margin-left:20px;}
+.atr_1 .p_1{ width:100%;height:15px; display: block;}
+.atr_1 .p_2{ width:100%; line-height:  80px; font-size:12px;}
+.atr_1 .span_1{ width:20%; float:right; font-size:14px; display: block; margin:25px 15px 25px 0;height:30px; line-height: 30px;}
+
+/*结果*/
+.resort_box{ width:95%;}
+.resort{ width:95%;height:auto;}
+.resort h1{ font-size:16px; color:#565656; font-family:"arial, helvetica, sans-serif"; font-weight:bold;  margin:0 auto;}
+.resort_h1{ padding-bottom: 20px;}
+.resort_span{ color:#4C84FD;}
+.resort_info{ width:98%; margin:0 auto; padding-top:20px; height:auto; margin-bottom:100%;}
+.footer{position:fixed; bottom:0;}
+}
