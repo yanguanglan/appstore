@@ -42,20 +42,22 @@
 			</div>
 		</div>
 		<!--搜索-->
-		<div class="re_inner">
-		     <p class="resort_box">游戏</p>
-		<div class="resort" id="resort_id">
+		<div class="resort">
 			<div class="resort_info">
-			 <h1>搜索结果：{{$q}}</h1>
-			 <h1 class="resort_h1">以下是关于“<span class="resort_span">{{$q}}</span>”的所有游戏信息</h1>
-				@foreach($apps as $app)
+				<h2>搜索结果：{{$q}}</h2>
+			 	<h2>以下是关于“<span class="resort_blue">{{$q}}</span>”的所有信息</h2>
+ 	        </div>
+		</div>
+
+		<div class="tabContent">
+	      	<div class="atr show">
+	      		@foreach($apps as $app)
 	      		<div class="atr_1">
-	      			<a href="{{route('detail', ['id'=>$app->id])}}">
-	      			<img src="{{asset($app->thumb)}}"></a>
-	      			<p>
-	      				<span class="p_1"><a href="{{route('detail', ['id'=>$app->id])}}">@if($app->name_chn==''){{str_limit($app->name_eng, 10)}}@else{{str_limit($app->name_chn, 10)}}@endif</a></span>
+	      			<a class="atr_left" href="{{route('detail', ['id'=>$app->id])}}">
+	      			<img src="{{asset($app->thumb)}}">
+	      				<span class="p_1">@if($app->name_chn==''){{str_limit($app->name_eng, 10)}}@else{{str_limit($app->name_chn, 10)}}@endif</span>
 	      				<span class="p_2">14.0M</span>
-	      			</p>
+	      			</a>
 	      			<a class="span_1" href="{{route('download', ['id'=>$app->id])}}">免费下载</a>
 	      		</div>
 	      		@endforeach
@@ -77,7 +79,6 @@
 	        		</ul>
 	        	</div>
 	      	</div>
-		</div>
-		
-		</div>
+
+        </div>
 @endsection

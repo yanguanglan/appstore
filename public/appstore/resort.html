@@ -10,6 +10,11 @@
         <link href="css/resort.css" rel="stylesheet">
         <link href="css/reset.css" rel="stylesheet">	
     	
+		<!--轮播图-->
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/banner.js"></script>
+		<script type="text/javascript" src="js/touchslider.dev.js"></script>
+		<script type="text/javascript" src="js/fastclick.js"></script>
 		<!--侧导航-->
         <script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/menu.js"></script>
@@ -21,23 +26,26 @@
            		$(this).addClass("tab_q").siblings().removeClass("tab_q");    
 	     	})
         })	
+        
+        $(function(){
+         	$("#dianji li").click(function(){
+           		$(this).addClass("cnav").siblings().removeClass("cnav");    
+	     	})
+        })	
+        
         $(function(){
          	$("#btn2_2 li").click(function(){
            		$(this).addClass("active").siblings().removeClass("active");    
 	     	})
         })	
 		</script>
-		<!--<script>
-            var  resort_id=document.getElementById(" resort_id")
-        resort_id.style.top=(document.body.scrollTop||document.documentElement.scrollTop)+(document.documentElement.clientHeight)+'px';
-        </script>-->
 	</head>
-	<body id="pgcontainer">
+	<body>
 		<div class="header">
 			<!--pc_header-->
 			<div class="header_info">
 				<div class="h_l">
-					<a href="#"><span></span><img src="img/VR-SEEN.png"></a>
+					<a href="javascript:void(0);"><span></span><img src="img/VR-SEEN.png"></a>
 				</div>
 				<div class="h_r">
 					<ul>
@@ -49,10 +57,10 @@
 						<li class="h_r_ul">
 							<ul class="h_r_2ul">
 								<li>热门搜索：</li>
-								<li><a href="#">大话西游</a></li>
-								<li><a href="#">大话西游</a></li>
-								<li><a href="#">大话西游</a></li>
-								<li><a href="#">大话西游</a></li>
+								<li><a href="javascript:void(0);">大话西游</a></li>
+								<li><a href="javascript:void(0);">大话西游</a></li>
+								<li><a href="javascript:void(0);">大话西游</a></li>
+								<li><a href="javascript:void(0);">大话西游</a></li>
 							</ul>
 						</li>	
 					</ul>	
@@ -62,20 +70,20 @@
 			<div class="header_phone">
 				<div id="nav">
 				<div id="navbar">
-    				<a href="#" class="menubtn">menu</a>
+    				<a href="javascript:void(0);" class="menubtn">menu</a>
     				<!--phone侧导航-s-->
     				<div id="hamburgermenu">
         				<ul id="dianji">
-        					<li><a href="#">全部</a></li>
-        					<li><a href="#">角色扮演</a></li>
-        					<li><a href="#">塔防策略</a></li>
-        					<li><a href="#">益智休闲</a></li>
-         					<li><a href="#">模拟经营</a></li>
-         					<li><a href="#">格斗射击</a></li>
-         					<li><a href="#">动作冒险</a></li>
-         					<li><a href="#">体育竞速</a></li>
-         					<li><a href="#">回合对战</a></li>
-         					<li><a href="#">其他</a></li>         					
+        					<li><a href="javascript:void(0);">全部</a></li>
+        					<li><a href="javascript:void(0);">角色扮演</a></li>
+        					<li><a href="javascript:void(0);">塔防策略</a></li>
+        					<li><a href="javascript:void(0);">益智休闲</a></li>
+         					<li><a href="javascript:void(0);">模拟经营</a></li>
+         					<li><a href="javascript:void(0);">格斗射击</a></li>
+         					<li><a href="javascript:void(0);">动作冒险</a></li>
+         					<li><a href="javascript:void(0);">体育竞速</a></li>
+         					<li><a href="javascript:void(0);">回合对战</a></li>
+         					<li><a href="javascript:void(0);">其他</a></li>         					
         				</ul>
     				</div>
     				<!--phone侧导航-e-->
@@ -91,31 +99,221 @@
 			</div>
 		</div>
 		<!--搜索-->
-		<div class="re_inner">
-		     <p class="resort_box">游戏</p>
-		<div class="resort" id="resort_id">
+		<div class="resort">
 			<div class="resort_info">
-			 <h1>搜索结果：全民泡泡龙</h1>
-			 <h1 class="resort_h1">以下是关于“<span class="resort_span">全民泡泡龙</span>”的所有游戏信息</h1>
-			<div class="atr_1">
-	      			<a>
-	      			<img src="img/banner.jpg"></a>
-	      			<p>
-	      				<span class="p_1">全民泡泡龙</span>
-	      				<span class="p_2">14.0M</span>
-	      			</p>
-	      			<span class="span_1">免费下载</span>
-	      	</div>
-            
-	      	</div>
+				<h2>搜索结果：角色扮演</h2>
+			 	<h2>以下是关于“<span class="resort_blue">角色扮演</span>”的所有游戏信息</h2>
+ 	        </div>
 		</div>
-		
-		</div>
+	
 		<!--选项卡-->
- 
+
+		
+        <div class="tabContent">
+	      	<div class="atr show">
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="btn btn2">
+	        	<ul id="btn2_2">
+	        		<li>上一页</li><li class="active">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>下一页</li>
+	        	</ul>
+	        	</div>
+	        	<div class="btn1">
+	        		<ul>
+	        			<li class="btn1_1">上一页</li><li>下一页</li>
+	        		</ul>
+	        	</div>
+	      	</div>
+	     	
+			<div class="atr">
+	     		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	     	</div>
+	       	<div class="atr">
+	       		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		<div class="atr_1">
+	      			<a class="atr_left">
+	      			   <img src="img/banner.jpg">
+	      			   <span class="p_1">全民泡泡龙</span>
+	      			   <span class="p_2">14.0M</span>
+                    </a>
+	      			<a class="span_1">免费下载</a>
+	      		</div>
+	      		
+	       	</div>
+  
+        </div>
+
+	    
 	    
 	    <div class="footer">&copy;2015杭州唯见科技有限公司版权所有</div>
 
-	
+	    <script type="text/javascript">
+            $(function(){
+         	$(".tab a").click(function(e){
+     		e.stopPropagation();
+     		e.preventDefault();
+     		var $index=jQuery(this).index();
+           	$(this).addClass("active").siblings().removeClass("active");    
+            $(".tabContent .atr").eq($index).show().siblings().hide();
+     	    })
+         })
+     	</script>
 	</body>
 </html>
+

@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-    <body id="pgcontainer">
+    <body>
 		<div class="header">
 			<!--pc_header-->
 			@include('layouts.header')
@@ -23,9 +23,9 @@
     				<!--phone侧导航-s-->
     				<div id="hamburgermenu">
         				<ul id="dianji">
-        					<li @if($category=='all')class="tab_q"@endif ><a href="{{route('list', ['platform' => $platform, 'category' => 'all'])}}">全部</a></li>
+        					<li @if($category=='all')class="cnav"@endif ><a href="{{route('list', ['platform' => $platform, 'category' => 'all'])}}">全部</a></li>
 			        		@foreach($categories as $cid)
-		        			<li @if($category==$cid->id)class="tab_q"@endif><a href="{{route('list', ['platform' => $platform, 'category' => $cid->id])}}">{{$cid->category}}</a></li>
+		        			<li @if($category==$cid->id)class="cnav"@endif><a href="{{route('list', ['platform' => $platform, 'category' => $cid->id])}}">{{$cid->category}}</a></li>
 		         			@endforeach   					
         				</ul>
     				</div>
@@ -63,12 +63,11 @@
 	      	<div class="atr show">
 	      		@foreach($apps as $app)
 	      		<div class="atr_1">
-	      			<a href="{{route('detail', ['id'=>$app->id])}}">
-	      			<img src="{{asset($app->thumb)}}"></a>
-	      			<p>
-	      				<span class="p_1"><a href="{{route('detail', ['id'=>$app->id])}}">@if($app->name_chn==''){{str_limit($app->name_eng, 10)}}@else{{str_limit($app->name_chn, 10)}}@endif</a></span>
+	      			<a class="atr_left" href="{{route('detail', ['id'=>$app->id])}}">
+	      			<img src="{{asset($app->thumb)}}">
+	      				<span class="p_1">@if($app->name_chn==''){{str_limit($app->name_eng, 10)}}@else{{str_limit($app->name_chn, 10)}}@endif</span>
 	      				<span class="p_2">14.0M</span>
-	      			</p>
+	      			</a>
 	      			<a class="span_1" href="{{route('download', ['id'=>$app->id])}}">免费下载</a>
 	      		</div>
 	      		@endforeach
