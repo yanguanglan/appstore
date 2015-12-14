@@ -70,7 +70,7 @@ body{
 .tab_option ul{width:80%; height:92px; float:left; padding-top:20px;}
 .tab_option ul li{float:left;height:35px;line-height: 35px;} 
 .tab_option ul li a{display: block;font-size:18px;color:#FFF;padding-left:20px;padding-right:20px;}
-.tab_q{/*width:105px;*/height:33px;background:#3965c2;border-radius: 5px; text-align:center;}
+.tab_q{ height:33px;background:#3965c2;border-radius: 5px; text-align:center;}
 .tab_l{padding-lefT:140px; }
 .atr{ display:none; width:100%; max-width:1020px; }
 .show{ display: block; }
@@ -102,7 +102,7 @@ body{
 .c_top .c_right h1{ padding-bottom: 15px;}
 .c_top .c_right .c_p1{ padding-bottom: 40px;}
 .c_top .c_right .c_p2{ padding-bottom: 40px;}
-.c_top .c_right .c_p3{ width:135px; height:44px;line-height:44px;border:solid 1px #4c84fd;text-align: center; font-size:18px; color:#4C84FD; display:block;}
+.c_top .c_right .c_p3{ width:135px; height:44px;line-height:44px;border:solid 1px #4c84fd;text-align: center; font-size:18px; color:#4C84FD; display:block; float:left;}
 .c_top .c_right .c_p3:hover{ background:#4c84fd; color:#FFF;}
 .c_main{/*height:284px;*/ margin-bottom: 50px;}
 .c_main p img{ width:162px; height:246px; display: inline; margin-right:15px;}
