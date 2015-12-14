@@ -28,7 +28,7 @@
 			 	    	<h1>@if($app->name_chn==''){{$app->name_eng}}@else{{$app->name_chn}} {{$app->name_eng}}@endif</h1>
 			 	    	<p class="c_p1">{{$app->downloads}}次下载</p>
 			 	    	<p class="c_p2">简介</p>
-			 	    	<p class="c_p3"><a href="{{route('download', ['id'=>$app->id])}}">免费下载</a></p>
+			 	    	<a class="c_p3" href="{{route('download', ['id'=>$app->id])}}">免费下载</a>
 			 	    </div>
 			    </div>
 			    <div class="c_main">
