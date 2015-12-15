@@ -23,9 +23,9 @@
     				<!--phone侧导航-s-->
     				<div id="hamburgermenu">
         				<ul id="dianji">
-        					<li @if($category=='all')class="tab_q"@endif ><a href="{{route('list', ['platform' => $platform, 'category' => 'all'])}}">全部</a></li>
+        					<li><a @if($category=='all')class="cnav"@endif href="{{route('list', ['platform' => $platform, 'category' => 'all'])}}">全部</a></li>
 			        		@foreach($categories as $cid)
-		        			<li @if($category==$cid->id)class="tab_q"@endif><a href="{{route('list', ['platform' => $platform, 'category' => $cid->id])}}">{{$cid->category}}</a></li>
+		        			<li><a @if($category==$cid->id)class="cnav"@endif href="{{route('list', ['platform' => $platform, 'category' => $cid->id])}}">{{$cid->category}}</a></li>
 		         			@endforeach   					
         				</ul>
     				</div>
