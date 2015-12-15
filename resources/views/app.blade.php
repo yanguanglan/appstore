@@ -80,7 +80,7 @@
 	        	</div>
 	        	<div class="btn1">
 	        		<ul>
-	        		@if($apps->currentPage()<1)
+	        		@if($apps->currentPage()<=1)
 	        			<li class="btn1_1">上一页</li>
 	        		@else
 	        		<li><a href="{{$apps->previousPageUrl()}}">上一页</a></li>
