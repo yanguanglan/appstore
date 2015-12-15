@@ -9,7 +9,7 @@
 
 @section('content')
     <body>
-		<div class="header">
+		<div class="header" id="pcnav">
 			<!--pc_header-->
 			@include('layouts.header')
 			<!--phone_header-->
@@ -18,6 +18,7 @@
 				<div class="navbar_logo"><a href="/"><img src="{{asset('img/logo.png')}}" width="120px" height="30px"></a></div>	
 			</div>
 		</div>
+		<div class="full"></div>
 		<!--选项卡-->
 		<div class="box_back"></div>
 		<div class="content">
@@ -30,6 +31,7 @@
 			 	    	<p class="c_p2">简介</p>
 			 	    	<a class="c_p3" href="{{route('download', ['id'=>$app->id])}}">免费下载</a>
 			 	    </div>
+			 	    <div style="clear:both;"></div>
 			    </div>
 			    <div class="c_main">
 			    	<p class="c_m_p">截屏</p>

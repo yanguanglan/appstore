@@ -1,11 +1,11 @@
 //搜索框跳转
 $(function(){
-	var $searchText=$(".search_text");
+	var $searchText=$("#search_text");
 	var $searchBtn=$("#search_btn");
 	$searchBtn.click(function(){
 		enterkey();
 	});
-	var $searchText=$('.search_text');
+	var $searchText=$('#search_text');
 	$searchText.focus(function(){
 		if($(this).val()==this.defaultValue){
 			$(this).val('');

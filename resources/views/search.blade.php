@@ -11,8 +11,8 @@
 @endsection
 
 @section('content')
-    <body id="pgcontainer">
-		<div class="header">
+    <body>
+		<div class="header" id="pcnav">
 			<!--pc_header-->
 			@include('layouts.header')
 			<!--phone_header-->
@@ -34,13 +34,15 @@
     			<div class="overlay"></div>
 				</div>
 				<div class="navbar_logo"><a href="/"><img src="{{asset('img/logo.png')}}" width="120px" height="28px"></a></div>
-		        <p class="navbar_search1">
-		        	<input type="text" class="search_text" placeholder="请输入关键搜索">
+		       	<p class="navbar_search1">
+		        	<input type="text" class="search_inp inp" id="search_text" placeholder="请输入关键搜索" />
 		        	<img src="{{asset('img/search-icon.png')}}" width="20px" height="20px">
+                    <input type="submit" id="search_btn" value="搜索" class="h_r_2">
 		        </p>
 		       
 			</div>
 		</div>
+        <div class="header_null"></div>
 		<!--搜索-->
 		<div class="resort">
 			<div class="resort_info">

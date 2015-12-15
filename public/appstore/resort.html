@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<!--<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">-->
+        <meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="format-detection" content="telephone=no">
@@ -20,6 +21,26 @@
 		<script type="text/javascript" src="js/menu.js"></script>
 		
 		<script>
+			$(document).ready(function(e) {
+    		$(window).scroll(function(){
+				var p=$(this).scrollTop(); //获得滚进距离
+				$("#pcnav").offset({"left":0,"top":p});
+			})
+			t=$('#pcnav').offset().top;//获取原来高度
+			$(window).scroll(function(){
+				s=$(document).scrollTop();
+				if(s>t){
+					$('#pcnav').css('position','fixed');
+					$('#pcnav').css('top','0px');
+					$('.navbar_search1').css('display','none')
+					}else{
+						$('#pcnav').css('top','0px');
+						$('.navbar_search1').css('display','block');
+					}
+				})
+			});
+		</script>
+		<script>
 		$(function(){
 
          	$("#tab_op li").click(function(){
@@ -27,40 +48,48 @@
 	     	})
         })	
         
-        $(function(){
-         	$("#dianji li").click(function(){
-           		$(this).addClass("cnav").siblings().removeClass("cnav");    
+         $(function(){
+         	$("#dianji li a ").click(function(){
+           		$(this).addClass("cnav").parent("li").siblings().children("a").removeClass("cnav");    
 	     	})
         })	
-        
         $(function(){
-         	$("#btn2_2 li").click(function(){
-           		$(this).addClass("active").siblings().removeClass("active");    
-	     	})
+         	$("#btn2_2 li a").click(function(){
+           		$(this).addClass("active").parent("li").siblings().children("a").removeClass("active");    
+	     	});
         })	
 		</script>
+        <script>
+			   $(document).ready(function() {
+                $('.inp').focus(function(){
+					$('.search_inp').css("width","70%");
+					$('.h_r_2').css("display","block");
+					
+					})
+            });
+	    </script>
 	</head>
 	<body>
-		<div class="header">
+		<div class="header" id="pcnav">
 			<!--pc_header-->
 			<div class="header_info">
 				<div class="h_l">
-					<a href="javascript:void(0);"><span></span><img src="img/VR-SEEN.png"></a>
+					<a href="#"><span></span><img src="img/VR-SEEN.png"></a>
 				</div>
 				<div class="h_r">
 					<ul>
 						<li class="h_r_search">
 							<img src="img/search-icon.png">
 							<input type="button" value="搜索" class="h_r_2">
-							<input type="text" class="h_r_1"placeholder="请输入游戏名">
+							<input type="text" class="h_r_1 search_inp"placeholder="请输入游戏名">
 						</li>
 						<li class="h_r_ul">
 							<ul class="h_r_2ul">
 								<li>热门搜索：</li>
-								<li><a href="javascript:void(0);">大话西游</a></li>
-								<li><a href="javascript:void(0);">大话西游</a></li>
-								<li><a href="javascript:void(0);">大话西游</a></li>
-								<li><a href="javascript:void(0);">大话西游</a></li>
+								<li><a href="#">大话西游</a></li>
+								<li><a href="#">大话西游</a></li>
+								<li><a href="#">大话西游</a></li>
+								<li><a href="#">大话西游</a></li>
 							</ul>
 						</li>	
 					</ul>	
@@ -70,20 +99,20 @@
 			<div class="header_phone">
 				<div id="nav">
 				<div id="navbar">
-    				<a href="javascript:void(0);" class="menubtn">menu</a>
+    				<a href="#" class="menubtn">menu</a>
     				<!--phone侧导航-s-->
     				<div id="hamburgermenu">
         				<ul id="dianji">
-        					<li><a href="javascript:void(0);">全部</a></li>
-        					<li><a href="javascript:void(0);">角色扮演</a></li>
-        					<li><a href="javascript:void(0);">塔防策略</a></li>
-        					<li><a href="javascript:void(0);">益智休闲</a></li>
-         					<li><a href="javascript:void(0);">模拟经营</a></li>
-         					<li><a href="javascript:void(0);">格斗射击</a></li>
-         					<li><a href="javascript:void(0);">动作冒险</a></li>
-         					<li><a href="javascript:void(0);">体育竞速</a></li>
-         					<li><a href="javascript:void(0);">回合对战</a></li>
-         					<li><a href="javascript:void(0);">其他</a></li>         					
+        					<li><a href="#" class="cnav">全部</a></li>
+        					<li><a href="#">角色扮演</a></li>
+        					<li><a href="#">塔防策略</a></li>
+        					<li><a href="#">益智休闲</a></li>
+         					<li><a href="#">模拟经营</a></li>
+         					<li><a href="#">格斗射击</a></li>
+         					<li><a href="#">动作冒险</a></li>
+         					<li><a href="#">体育竞速</a></li>
+         					<li><a href="#">回合对战</a></li>
+         					<li><a href="#">其他</a></li>         					
         				</ul>
     				</div>
     				<!--phone侧导航-e-->
@@ -92,12 +121,14 @@
 				</div>
 				<div class="navbar_logo"><img src="img/logo.png" width="120px" height="28px"></div>
 		        <p class="navbar_search1">
-		        	<input type="text" />
+		        	<input type="text" class="search_inp inp" />
 		        	<img src="img/search-icon.png" width="20px" height="20px">
+                    <input type="button" value="搜索" class="h_r_2">
 		        </p>
 		       
 			</div>
 		</div>
+         <div class="header_null"></div>
 		<!--搜索-->
 		<div class="resort">
 			<div class="resort_info">
@@ -232,13 +263,13 @@
 	      			<a class="span_1">免费下载</a>
 	      		</div>
 	      		<div class="btn btn2">
-	        	<ul id="btn2_2">
-	        		<li>上一页</li><li class="active">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>下一页</li>
-	        	</ul>
-	        	</div>
+	            	<ul id="btn2_2">
+	        		<li><a href="javascript:;">上一页</a></li><li><a href="javascript:;" class="active">1</a></li><li><a href="javascript:;">2</a></li><li><a href="javascript:;">3</a></li><li><a href="javascript:;">4</a></li><li><a href="javascript:;">5</a></li><li><a href="javascript:;">6</a></li><li><a href="javascript:;">7</a></li><li><a href="javascript:;">8</a></li><li><a href="javascript:;">下一页</a></li>
+	            	</ul>
+	          	</div>
 	        	<div class="btn1">
 	        		<ul>
-	        			<li class="btn1_1">上一页</li><li>下一页</li>
+	        			<li class="btn1_1"><a href="javascript:;">上一页</a></li><li><a href="javascript:;">下一页</a></li>
 	        		</ul>
 	        	</div>
 	      	</div>
